@@ -18,8 +18,8 @@ TextureTestWindow::TextureTestWindow(int width, int height, const string &filena
 	createVertexArrayObject();
 
 	mTechnique
-			.addShaderProgram(GL_VERTEX_SHADER, {"resources/vertexshader.glsl"})
-			.addShaderProgram(GL_FRAGMENT_SHADER, {"resources/fragmentshader.glsl"});
+			.addShaderProgram(GL_VERTEX_SHADER, {"../resources/vertexshader.glsl"})
+			.addShaderProgram(GL_FRAGMENT_SHADER, {"../resources/fragmentshader.glsl"});
 
 	mTechnique.finalize();
 	mTechnique.enable();
@@ -29,7 +29,7 @@ TextureTestWindow::TextureTestWindow(int width, int height, const string &filena
 
 	glViewport(0, 0, mWidth, mHeight);
 
-	mCamera.setPosition({0.0f, 0.0f, 10.0f})
+	mCamera.setPosition({0.0f, 0.0f, 2.0f})
 			.setFieldOfView(45.0f)
 			.setNearAndFarPlanes(1.0f, 1000.0f)
 			.setViewportAspectRatio((float)mWidth / mHeight);
